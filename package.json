@@ -1,15 +1,16 @@
 {
-  "name": "generic-erc721-subgraph",
+  "name": "moji-tracking-subgraph",
   "license": "MIT",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ generic-erc721-subgraph",
-    "create-local": "graph create --node http://localhost:8020/ generic-erc721-subgraph",
-    "remove-local": "graph remove --node http://localhost:8020/ generic-erc721-subgraph",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 generic-erc721-subgraph"
+    "deploy": "graph deploy --product hosted-service 0xbeedao/moji-tracking-rinkeby",
+    "create-local": "graph create --node http://localhost:8020/ moji-tracking-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ moji-tracking-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 moji-tracking-subgraph"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.9",
     "@graphprotocol/graph-cli": "0.21.1",
     "@graphprotocol/graph-ts": "0.20.0"
   }
